@@ -13,41 +13,45 @@ A registered customer who owns a printed loyalty card links it to their webshop 
 ## Preconditions
 - The customer is registered and logged in (see UC-027).
 - The customer has a digital loyalty card (see UC-043).
-- The customer holds a printed loyalty card showing a card number.
+- The customer holds a printed loyalty card showing a card number and carrying a secret verification code (for example under a scratch panel).
 
 ## Main Flow
 1. The registered customer opens their loyalty card in their account (see UC-043).
 2. The registered customer indicates they want to link a physical card.
-3. The system asks for the card number printed on the physical card.
-4. The registered customer enters the card number.
-5. The system checks that the card number belongs to an issued physical card that is not yet linked to any customer.
+3. The system asks for the card number printed on the physical card and its secret verification code.
+4. The registered customer enters the card number and the verification code.
+5. The system checks that the customer is not temporarily barred from trying, that the card number belongs to an issued physical card, that the verification code matches that card, and that the card is not yet linked to any customer.
 6. The system links the physical card to the customer's existing loyalty card.
 7. The system confirms that the physical card is linked and shows the loyalty card with the linked physical card number and the current stamps.
 
 ## Alternative Flows
-- **AF-1: Replace a Linked Physical Card** — At step 2, the customer already has a physical card linked (only if replacement is allowed, see OQ-1). The system asks the customer to confirm that the currently linked card will be replaced. If the customer confirms, the flow continues at step 3; if not, the use case ends.
+- **AF-1: Replace a Linked Physical Card** — At step 2, the customer already has a physical card linked. The system asks the customer to confirm that the currently linked card will be replaced and will become invalid. If the customer confirms, the flow continues at step 3, and at step 6 the system links the new card and invalidates the previously linked card; the flow then continues at step 7. If the customer does not confirm, the use case ends and the linked card stays as it is.
 
 ## Exception Flows
-- **EF-1: Unknown Card Number** — At step 5, the entered card number does not match any issued physical card. The system informs the customer that the card number is not recognised and no link is made. The customer can enter another number at step 4.
-- **EF-2: Card Already Linked to Another Customer** — At step 5, the card is already linked to another customer. The system informs the customer that the card cannot be linked and no link is made. The customer can enter another number at step 4.
+- **EF-1: Card Number or Verification Code Not Recognised** — At step 5, the entered card number does not match any issued physical card, or the verification code does not match that card. The system informs the customer that the combination is not recognised, without stating which of the two is wrong, counts the attempt as failed, and no link is made. The customer can enter the details again at step 4.
+- **EF-2: Card Already Linked to Another Customer** — At step 5, the card number and verification code match, but the card is already linked to another customer, or has been made invalid by a replacement. The system informs the customer that the card cannot be linked, counts the attempt as failed, and no link is made. The customer can enter other details at step 4.
+- **EF-3: Too Many Failed Attempts** — At step 5, the customer has reached the configured number of failed attempts. The system informs the customer that they must wait before trying again, does not check the entered details, and no link is made. The use case ends; the customer can start again from step 2 once the waiting period has passed.
 
 ## Postconditions
 - The physical card is linked to the customer's loyalty card.
 - The physical card and the digital card identify the same customer and share the same stamps.
+- When a previous physical card was replaced, that card is invalid and cannot be linked again.
 
 ## Business Rules
 - **BR-1:** A physical card can be linked to only one customer.
 - **BR-2:** Only card numbers of issued physical cards can be linked.
-- **BR-3:** Replacing a linked physical card requires explicit confirmation by the customer.
+- **BR-3:** Linking requires both the card number and the secret verification code of the card; both must match the same issued card.
+- **BR-4:** A customer can have only one physical card linked. Linking a new card replaces the old one, which becomes invalid.
+- **BR-5:** Replacing a linked physical card requires explicit confirmation by the customer.
+- **BR-6:** After the configured number of failed attempts, the customer cannot try again until the configured waiting period has passed.
 
 ## Open Questions
-- **OQ-1:** Can a customer link more than one physical card, or replace a lost card with a new one? If replacement is allowed, what happens to the previously linked card (blocked, or still usable)?
-- **OQ-2:** Is a limit applied to repeated failed attempts to enter card numbers?
-- **OQ-3:** If a physical card carries stamps before it is linked (for example from a future POS use case), are those stamps added to the customer's balance at linking? (Out of scope today as POS stamps do not exist.)
+- **OQ-1:** If a physical card carries stamps before it is linked (for example from a future POS use case), are those stamps added to the customer's balance at linking? (Out of scope today as POS stamps do not exist; to be decided in the future POS use case.)
 
 ## Implementation Notes
-- Batches of physical card numbers are generated by a script outside the system UI. This is not an admin capability; the system must be able to recognise the issued numbers (how they get into the system is to be decided in the specification).
-- An unlinked card can be claimed by whoever enters its number first; the specification should consider how to limit misuse (see OQ-2).
+- Batches of physical card numbers, each with a secret verification code, are generated by a script outside the system UI. This is not an admin capability; the system must be able to recognise the issued numbers and verify the codes (how they get into the system is to be decided in the specification; codes should not be stored in readable form).
+- The number of failed attempts allowed and the waiting period are configured values; where they are configured is to be decided in the specification (they are not part of UC-046).
+- The verification code protects against claiming an unlinked card by guessing or reading its number only.
 - Out of scope: viewing or blocking customer cards by the admin, POS use of the physical card (future use case).
 
 ## Implemented By
