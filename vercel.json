@@ -1,0 +1,14 @@
+{
+  "buildCommand": "vite build",
+  "outputDirectory": "dist/public",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://kruzeapp-76726500838.europe-west1.run.app/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

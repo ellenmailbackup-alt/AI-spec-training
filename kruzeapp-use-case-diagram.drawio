@@ -1,0 +1,388 @@
+<mxfile host="app.diagrams.net" modified="2025-11-03T00:00:00.000Z" version="24.0.0">
+  <diagram name="KruzeApp Use Case Diagram" id="kruzeapp-uml-diagram">
+    <mxGraphModel dx="2000" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1600">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title -->
+        <mxCell id="title" value="KruzeApp - Complete System Use Case Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=20;fontStyle=1;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="400" y="10" width="1200" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=0;dashPattern=1 1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="10" width="360" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-title" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=13;fontStyle=1;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="1635" y="18" width="330" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-interface" value="→ Interface connection (uses ALL)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="1650" y="45" width="300" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-interface-line" value="" style="endArrow=none;html=1;strokeWidth=3;strokeColor=#333333;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1635" y="55" as="sourcePoint"/>
+            <mxPoint x="1647" y="55" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-usecase" value="→ Specific use case connection" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="1650" y="70" width="300" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-usecase-line" value="" style="endArrow=none;html=1;strokeWidth=1;strokeColor=#333333;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1635" y="80" as="sourcePoint"/>
+            <mxPoint x="1647" y="80" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-include" value="⤍ &lt;&lt;include&gt;&gt; relationship" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="1650" y="95" width="300" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-include-line" value="" style="endArrow=open;html=1;strokeWidth=1;strokeColor=#333333;dashed=1;dashPattern=5 5;endFill=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1635" y="105" as="sourcePoint"/>
+            <mxPoint x="1647" y="105" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-extend" value="⤍ &lt;&lt;extend&gt;&gt; relationship" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="1650" y="120" width="300" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-extend-line" value="" style="endArrow=open;html=1;strokeWidth=1;strokeColor=#333333;dashed=1;dashPattern=3 3;endFill=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1635" y="130" as="sourcePoint"/>
+            <mxPoint x="1647" y="130" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-future" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#0066cc;dashed=1;dashPattern=5 5;" vertex="1" parent="1">
+          <mxGeometry x="1635" y="150" width="50" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend-future-text" value="Future/planned feature" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="1695" y="152" width="255" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- PRIMARY ACTORS (Left Side) - Much smaller -->
+        <mxCell id="actor-admin" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f5d7a1;strokeColor=#8A6959;strokeWidth=2;fontSize=10;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="65" y="250" width="30" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor-pos-operator" value="POS&#xa;Operator" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f5d7a1;strokeColor=#8A6959;strokeWidth=2;fontSize=10;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="65" y="520" width="30" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor-customer" value="Customer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f5d7a1;strokeColor=#8A6959;strokeWidth=2;fontSize=10;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="65" y="760" width="30" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- SECONDARY ACTORS (Right Side) - Much smaller -->
+        <mxCell id="actor-database" value="PostgreSQL&#xa;Database" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#d4e4f7;strokeColor=#4A90E2;strokeWidth=2;fontSize=9;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="220" width="30" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor-email" value="Email&#xa;Service" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#d4e4f7;strokeColor=#4A90E2;strokeWidth=2;fontSize=9;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="340" width="30" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor-auth" value="Auth&#xa;Service" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#d4e4f7;strokeColor=#4A90E2;strokeWidth=2;fontSize=9;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="460" width="30" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor-pdf" value="PDF&#xa;Generator" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#d4e4f7;strokeColor=#4A90E2;strokeWidth=2;fontSize=9;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="580" width="30" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor-storage" value="File&#xa;Storage" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#d4e4f7;strokeColor=#4A90E2;strokeWidth=2;fontSize=9;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="700" width="30" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ADMIN PANEL INTERFACE (Swimlane) - Compact -->
+        <mxCell id="swimlane-admin" value="Admin Panel Interface" style="swimlane;html=1;startSize=30;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=2;fontSize=14;fontStyle=1;fontFamily=Arial;swimlaneFillColor=#FFF8F0;horizontal=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="210" width="1450" height="280" as="geometry"/>
+        </mxCell>
+
+        <!-- Admin Panel Use Cases - Compact (18 use cases in 3 rows) -->
+        <mxCell id="uc-admin-1" value="Manage&#xa;Products" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="30" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-2" value="Manage&#xa;Customers" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="150" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-3" value="Create Sales/&#xa;Invoices" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="270" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-4" value="Update Sale&#xa;Status" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="390" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-5" value="Send Email&#xa;Invoice" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="510" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-6" value="Configure&#xa;B2B/B2C Pricing" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="630" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-7" value="Set Customer&#xa;Prices" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="750" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-8" value="Manage&#xa;Suppliers" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="870" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-9" value="Create Supplier&#xa;Orders" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="990" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-10" value="Confirm Orders" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="1110" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-11" value="View Stock&#xa;Movements" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="1230" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Row 2 -->
+        <mxCell id="uc-admin-12" value="Adjust Stock&#xa;Manually" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="30" y="115" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-13" value="Create Coffee&#xa;Roasts" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="150" y="115" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-14" value="View Analytics&#xa;Dashboard" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="270" y="115" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-15" value="View Product&#xa;Statistics" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="390" y="115" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-16" value="View Customer&#xa;Statistics" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="510" y="115" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-17" value="Configure&#xa;Settings" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="630" y="115" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-admin-18" value="Manage&#xa;Blends" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-admin">
+          <mxGeometry x="750" y="115" width="100" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- POS INTERFACE (Swimlane) - Compact -->
+        <mxCell id="swimlane-pos" value="Point of Sale (POS) Interface" style="swimlane;html=1;startSize=30;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=2;fontSize=14;fontStyle=1;fontFamily=Arial;swimlaneFillColor=#FFF8F0;horizontal=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="500" width="1450" height="160" as="geometry"/>
+        </mxCell>
+
+        <!-- POS Use Cases - Compact (9 use cases in 2 rows) -->
+        <mxCell id="uc-pos-1" value="Browse&#xa;Products" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-pos">
+          <mxGeometry x="30" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-pos-2" value="Select&#xa;Customer" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-pos">
+          <mxGeometry x="150" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-pos-3" value="Quick Register&#xa;Customer" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-pos">
+          <mxGeometry x="270" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-pos-4" value="Build Cart" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-pos">
+          <mxGeometry x="390" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-pos-5" value="Apply&#xa;Discount" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-pos">
+          <mxGeometry x="510" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-pos-6" value="Process&#xa;Payment" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-pos">
+          <mxGeometry x="630" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-pos-7" value="Split&#xa;Payment" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-pos">
+          <mxGeometry x="750" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-pos-8" value="Generate&#xa;Receipt" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-pos">
+          <mxGeometry x="870" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-pos-9" value="Daily Sales&#xa;Report" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-pos">
+          <mxGeometry x="990" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- STOREFRONT INTERFACE (Swimlane) - Compact -->
+        <mxCell id="swimlane-storefront" value="Storefront / E-Commerce Interface" style="swimlane;html=1;startSize=30;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=2;fontSize=14;fontStyle=1;fontFamily=Arial;swimlaneFillColor=#FFF8F0;horizontal=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="670" width="1450" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Storefront Use Cases - Compact (4 use cases) -->
+        <mxCell id="uc-store-1" value="Browse&#xa;Catalog" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-storefront">
+          <mxGeometry x="30" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-store-2" value="Filter by&#xa;Category" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-storefront">
+          <mxGeometry x="150" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-store-3" value="Manage&#xa;Cart" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-storefront">
+          <mxGeometry x="270" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-store-4" value="Read News/&#xa;Blog" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8BF9C;strokeColor=#8A6959;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-storefront">
+          <mxGeometry x="390" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- LOYALTY APP INTERFACE (Future) - Compact -->
+        <mxCell id="swimlane-loyalty" value="Loyalty App Interface (PLANNED)" style="swimlane;html=1;startSize=30;fillColor=#e8f4f8;strokeColor=#0066cc;strokeWidth=2;fontSize=14;fontStyle=1;fontFamily=Arial;swimlaneFillColor=#f0f8ff;horizontal=1;dashed=1;dashPattern=5 5;" vertex="1" parent="1">
+          <mxGeometry x="150" y="800" width="1450" height="160" as="geometry"/>
+        </mxCell>
+
+        <!-- Loyalty App Use Cases - Compact (9 use cases) -->
+        <mxCell id="uc-loyalty-1" value="Register&#xa;Email" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#0066cc;strokeWidth=1.5;fontSize=10;fontFamily=Arial;dashed=1;dashPattern=5 5;" vertex="1" parent="swimlane-loyalty">
+          <mxGeometry x="30" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-loyalty-2" value="Purchase&#xa;History" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#0066cc;strokeWidth=1.5;fontSize=10;fontFamily=Arial;dashed=1;dashPattern=5 5;" vertex="1" parent="swimlane-loyalty">
+          <mxGeometry x="150" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-loyalty-3" value="Earn&#xa;Points" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#0066cc;strokeWidth=1.5;fontSize=10;fontFamily=Arial;dashed=1;dashPattern=5 5;" vertex="1" parent="swimlane-loyalty">
+          <mxGeometry x="270" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-loyalty-4" value="Collect&#xa;Badges" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#0066cc;strokeWidth=1.5;fontSize=10;fontFamily=Arial;dashed=1;dashPattern=5 5;" vertex="1" parent="swimlane-loyalty">
+          <mxGeometry x="390" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-loyalty-5" value="Read Daily&#xa;Tips" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#0066cc;strokeWidth=1.5;fontSize=10;fontFamily=Arial;dashed=1;dashPattern=5 5;" vertex="1" parent="swimlane-loyalty">
+          <mxGeometry x="510" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-loyalty-6" value="Redeem&#xa;Rewards" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#0066cc;strokeWidth=1.5;fontSize=10;fontFamily=Arial;dashed=1;dashPattern=5 5;" vertex="1" parent="swimlane-loyalty">
+          <mxGeometry x="630" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-loyalty-7" value="Submit&#xa;Reviews" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#0066cc;strokeWidth=1.5;fontSize=10;fontFamily=Arial;dashed=1;dashPattern=5 5;" vertex="1" parent="swimlane-loyalty">
+          <mxGeometry x="750" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-loyalty-8" value="Monthly&#xa;Challenges" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#0066cc;strokeWidth=1.5;fontSize=10;fontFamily=Arial;dashed=1;dashPattern=5 5;" vertex="1" parent="swimlane-loyalty">
+          <mxGeometry x="870" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-loyalty-9" value="Brewing&#xa;Guides" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4f8;strokeColor=#0066cc;strokeWidth=1.5;fontSize=10;fontFamily=Arial;dashed=1;dashPattern=5 5;" vertex="1" parent="swimlane-loyalty">
+          <mxGeometry x="990" y="45" width="100" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- BACKEND SERVICES (Swimlane) - Compact -->
+        <mxCell id="swimlane-backend" value="Backend / Shared Services" style="swimlane;html=1;startSize=30;fillColor=#CCA693;strokeColor=#5C4033;strokeWidth=2;fontSize=14;fontStyle=1;fontFamily=Arial;swimlaneFillColor=#F5EBE0;horizontal=1;dashed=1;dashPattern=8 4;" vertex="1" parent="1">
+          <mxGeometry x="150" y="970" width="1450" height="160" as="geometry"/>
+        </mxCell>
+
+        <!-- Backend Services - Compact (9 services) -->
+        <mxCell id="uc-backend-1" value="Authentication" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CCA693;strokeColor=#5C4033;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-backend">
+          <mxGeometry x="30" y="45" width="95" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-backend-2" value="Session&#xa;Mgmt" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CCA693;strokeColor=#5C4033;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-backend">
+          <mxGeometry x="145" y="45" width="95" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-backend-3" value="Generate&#xa;Invoice #" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CCA693;strokeColor=#5C4033;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-backend">
+          <mxGeometry x="260" y="45" width="95" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-backend-4" value="Stock&#xa;Movements" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CCA693;strokeColor=#5C4033;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-backend">
+          <mxGeometry x="375" y="45" width="95" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-backend-5" value="Generate&#xa;PDF" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CCA693;strokeColor=#5C4033;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-backend">
+          <mxGeometry x="490" y="45" width="95" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-backend-6" value="Send&#xa;Email" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CCA693;strokeColor=#5C4033;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-backend">
+          <mxGeometry x="605" y="45" width="95" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-backend-7" value="Upload&#xa;Image" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CCA693;strokeColor=#5C4033;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-backend">
+          <mxGeometry x="720" y="45" width="95" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-backend-8" value="Calculate&#xa;Analytics" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CCA693;strokeColor=#5C4033;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-backend">
+          <mxGeometry x="835" y="45" width="95" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-backend-9" value="Validate&#xa;Input" style="ellipse;whiteSpace=wrap;html=1;fillColor=#CCA693;strokeColor=#5C4033;strokeWidth=1.5;fontSize=10;fontFamily=Arial;" vertex="1" parent="swimlane-backend">
+          <mxGeometry x="950" y="45" width="95" height="48" as="geometry"/>
+        </mxCell>
+
+        <!-- ACTOR TO INTERFACE CONNECTIONS -->
+        <!-- Admin User uses all in Admin Panel -->
+        <mxCell id="edge-admin-to-admin-panel" value="uses all" style="endArrow=none;html=1;strokeWidth=2;strokeColor=#333333;fontSize=9;fontFamily=Arial;" edge="1" parent="1" source="actor-admin" target="swimlane-admin">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- POS Operator uses all in POS Interface -->
+        <mxCell id="edge-pos-to-pos-panel" value="uses all" style="endArrow=none;html=1;strokeWidth=2;strokeColor=#333333;fontSize=9;fontFamily=Arial;" edge="1" parent="1" source="actor-pos-operator" target="swimlane-pos">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Customer uses all in Storefront -->
+        <mxCell id="edge-customer-to-storefront" value="uses all" style="endArrow=none;html=1;strokeWidth=2;strokeColor=#333333;fontSize=9;fontFamily=Arial;" edge="1" parent="1" source="actor-customer" target="swimlane-storefront">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Customer uses all in Loyalty App (future) -->
+        <mxCell id="edge-customer-to-loyalty" value="uses all" style="endArrow=none;html=1;strokeWidth=2;strokeColor=#0066cc;fontSize=9;fontFamily=Arial;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="actor-customer" target="swimlane-loyalty">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- <<include>> RELATIONSHIPS -->
+        <!-- Create Sales/Invoices includes Generate Invoice Number -->
+        <mxCell id="edge-include-1" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;html=1;strokeWidth=1;strokeColor=#666666;dashed=1;dashPattern=5 5;endFill=0;fontSize=8;fontFamily=Arial;" edge="1" parent="1" source="uc-admin-3" target="uc-backend-3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Send Email Invoice includes Generate Invoice PDF -->
+        <mxCell id="edge-include-2" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;html=1;strokeWidth=1;strokeColor=#666666;dashed=1;dashPattern=5 5;endFill=0;fontSize=8;fontFamily=Arial;" edge="1" parent="1" source="uc-admin-5" target="uc-backend-5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Send Email Invoice includes Send Email -->
+        <mxCell id="edge-include-3" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;html=1;strokeWidth=1;strokeColor=#666666;dashed=1;dashPattern=5 5;endFill=0;fontSize=8;fontFamily=Arial;" edge="1" parent="1" source="uc-admin-5" target="uc-backend-6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Update Sale Status includes Create Stock Movements -->
+        <mxCell id="edge-include-4" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;html=1;strokeWidth=1;strokeColor=#666666;dashed=1;dashPattern=5 5;endFill=0;fontSize=8;fontFamily=Arial;" edge="1" parent="1" source="uc-admin-4" target="uc-backend-4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Confirm Orders includes Create Stock Movements -->
+        <mxCell id="edge-include-5" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;html=1;strokeWidth=1;strokeColor=#666666;dashed=1;dashPattern=5 5;endFill=0;fontSize=8;fontFamily=Arial;" edge="1" parent="1" source="uc-admin-10" target="uc-backend-4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Create Coffee Roasts includes Create Stock Movements -->
+        <mxCell id="edge-include-6" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;html=1;strokeWidth=1;strokeColor=#666666;dashed=1;dashPattern=5 5;endFill=0;fontSize=8;fontFamily=Arial;" edge="1" parent="1" source="uc-admin-13" target="uc-backend-4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Manage Products includes Upload Product Image -->
+        <mxCell id="edge-include-7" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;html=1;strokeWidth=1;strokeColor=#666666;dashed=1;dashPattern=5 5;endFill=0;fontSize=8;fontFamily=Arial;" edge="1" parent="1" source="uc-admin-1" target="uc-backend-7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- View Analytics Dashboard includes Calculate Analytics -->
+        <mxCell id="edge-include-8" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;html=1;strokeWidth=1;strokeColor=#666666;dashed=1;dashPattern=5 5;endFill=0;fontSize=8;fontFamily=Arial;" edge="1" parent="1" source="uc-admin-14" target="uc-backend-8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- <<extend>> RELATIONSHIPS -->
+        <!-- Split Payment extends Process Payment -->
+        <mxCell id="edge-extend-1" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;html=1;strokeWidth=1;strokeColor=#666666;dashed=1;dashPattern=3 3;endFill=0;fontSize=8;fontFamily=Arial;" edge="1" parent="1" source="uc-pos-7" target="uc-pos-6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Apply Discount extends Build Cart -->
+        <mxCell id="edge-extend-2" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;html=1;strokeWidth=1;strokeColor=#666666;dashed=1;dashPattern=3 3;endFill=0;fontSize=8;fontFamily=Arial;" edge="1" parent="1" source="uc-pos-5" target="uc-pos-4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- SECONDARY ACTOR CONNECTIONS -->
+        <!-- Database to Backend Services -->
+        <mxCell id="edge-db-to-backend" value="" style="endArrow=none;html=1;strokeWidth=1;strokeColor=#4A90E2;dashed=1;dashPattern=3 3;" edge="1" parent="1" source="actor-database" target="swimlane-backend">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Email Service to Send Email -->
+        <mxCell id="edge-email-to-backend" value="" style="endArrow=none;html=1;strokeWidth=1;strokeColor=#4A90E2;" edge="1" parent="1" source="actor-email" target="uc-backend-6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Auth Service to Authentication -->
+        <mxCell id="edge-auth-to-backend" value="" style="endArrow=none;html=1;strokeWidth=1;strokeColor=#4A90E2;" edge="1" parent="1" source="actor-auth" target="uc-backend-1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- PDF Generator to Generate PDF -->
+        <mxCell id="edge-pdf-to-backend" value="" style="endArrow=none;html=1;strokeWidth=1;strokeColor=#4A90E2;" edge="1" parent="1" source="actor-pdf" target="uc-backend-5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- File Storage to Upload Image -->
+        <mxCell id="edge-storage-to-backend" value="" style="endArrow=none;html=1;strokeWidth=1;strokeColor=#4A90E2;" edge="1" parent="1" source="actor-storage" target="uc-backend-7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- NOTES BOX - Compact -->
+        <mxCell id="notes-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffef0;strokeColor=#8A6959;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="150" y="1150" width="1450" height="390" as="geometry"/>
+        </mxCell>
+        <mxCell id="notes-title" value="Architecture Notes &amp; Key Information" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=14;fontStyle=1;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1165" width="1410" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="notes-content" value="&lt;b&gt;System Overview:&lt;/b&gt; KruzeApp is a comprehensive omnichannel business management system for specialty coffee &amp; tea retail operations.&#xa;&#xa;&lt;b&gt;Technology Stack:&lt;/b&gt; React 18 + TypeScript + TailwindCSS + shadcn/ui | Express.js 4.21 + Node.js (ES modules) | PostgreSQL + Drizzle ORM | Replit OpenID Connect | Resend Email | PDFKit&#xa;&#xa;&lt;b&gt;Key Architectural Patterns:&lt;/b&gt; Clean Architecture (Routes → Services → Storage → Database) | Service Layer Pattern | Repository Pattern | Transaction Pattern (ACID compliance) | Middleware Pattern (auth, logging, error handling)&#xa;&#xa;&lt;b&gt;Security:&lt;/b&gt; HTTP Security Headers via Helmet (CSP, HSTS, XSS Protection) | CORS with origin validation | Rate Limiting (1000 req/15min API, 10 req/15min auth) | Zod schema validation | Row-level locking | PostgreSQL session storage (7-day TTL)&#xa;&#xa;&lt;b&gt;Data Model:&lt;/b&gt; 30+ database tables | Complex pricing strategy (B2B/B2C prices, customer-specific overrides, date-ranged validity) | Split payment support | Automatic stock movement generation | Coffee roasting workflow tracking (green → roasted) | Flexible product blending&#xa;&#xa;&lt;b&gt;Future Roadmap (Loyalty App):&lt;/b&gt; Email verification authentication | Points system (€1 = 1 point) | Achievement badges &amp; monthly challenges | Product reviews with photos | Reward redemption with QR vouchers | Daily tips &amp; brewing guides | Push notifications&#xa;&#xa;&lt;b&gt;Deployment:&lt;/b&gt; Replit platform with PostgreSQL hosting, Resend email connector, and OpenID Connect integration&#xa;&#xa;&lt;b&gt;Key Business Features:&lt;/b&gt; Multi-interface design (Admin, POS, Storefront, Loyalty App planned) | Split payment processing | Dynamic pricing by customer type | Automated inventory tracking | Coffee roasting workflow | Invoice generation &amp; email delivery | Comprehensive analytics | Customer relationship management" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=9;fontFamily=Arial;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1200" width="1410" height="325" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

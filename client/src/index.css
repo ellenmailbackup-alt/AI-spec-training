@@ -1,0 +1,351 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LIGHT MODE - Default application theme */
+:root {
+  --button-outline: rgba(0, 0, 0, 0.1);
+  --badge-outline: rgba(0, 0, 0, 0.05);
+
+  /* Automatic computation of border around primary / danger buttons */
+  --opaque-button-border-intensity: -8; /* In terms of percentages */
+
+  /* Backgrounds applied on top of other backgrounds when hovered/active */
+  --elevate-1: rgba(138, 105, 89, 0.04);
+  --elevate-2: rgba(138, 105, 89, 0.1);
+
+  --background: 80 11% 94%;
+  --foreground: 20 35% 20%;
+  --border: 150 2% 85%;
+  --card: 40 25% 97%;
+  --card-foreground: 20 30% 22%;
+  --card-border: 150 2% 90%;
+  --sidebar: 80 11% 94%;
+  --sidebar-foreground: 20 35% 25%;
+  --sidebar-border: 150 2% 85%;
+  --sidebar-primary: 20 21% 45%;
+  --sidebar-primary-foreground: 72 17% 98%;
+  --sidebar-accent: 28 62% 76%;
+  --sidebar-accent-foreground: 20 35% 28%;
+  --sidebar-ring: 20 21% 45%;
+  --popover: 40 25% 97%;
+  --popover-foreground: 20 30% 22%;
+  --popover-border: 150 2% 90%;
+  --primary: 20 21% 45%;
+  --primary-foreground: 72 17% 98%;
+  --secondary: 150 2% 80%;
+  --secondary-foreground: 20 35% 25%;
+  --muted: 150 2% 80%;
+  --muted-foreground: 25 18% 45%;
+  --accent: 28 62% 76%;
+  --accent-foreground: 25 35% 30%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 35 18% 80%;
+  --ring: 20 21% 45%;
+  --chart-1: 18 45% 38%;
+  --chart-2: 35 55% 48%;
+  --chart-3: 145 45% 42%;
+  --chart-4: 45 65% 55%;
+  --chart-5: 25 50% 40%;
+  --font-sans: Lato, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: Merriweather, Georgia, serif;
+  --font-mono: JetBrains Mono, Menlo, monospace;
+  --radius: 0.5rem; /* 8px */
+
+  /* Softer, warmer shadows for premium feel */
+  --shadow-2xs: 0px 1px 2px 0px hsl(20 30% 15% / 0.06);
+  --shadow-xs: 0px 1px 3px 0px hsl(20 30% 15% / 0.09);
+  --shadow-sm: 0px 2px 4px 0px hsl(20 30% 15% / 0.08), 0px 1px 2px -1px hsl(20 30% 15% / 0.1);
+  --shadow: 0px 4px 6px 0px hsl(20 30% 15% / 0.1), 0px 2px 4px -1px hsl(20 30% 15% / 0.08);
+  --shadow-md: 0px 6px 12px 0px hsl(20 30% 15% / 0.12), 0px 4px 8px -2px hsl(20 30% 15% / 0.1);
+  --shadow-lg: 0px 12px 24px 0px hsl(20 30% 15% / 0.14), 0px 8px 16px -4px hsl(20 30% 15% / 0.12);
+  --shadow-xl: 0px 20px 40px 0px hsl(20 30% 15% / 0.16), 0px 12px 24px -8px hsl(20 30% 15% / 0.14);
+  --shadow-2xl: 0px 32px 64px 0px hsl(20 30% 15% / 0.18);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  /* Fallback for older browsers */
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+.dark {
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+
+  --opaque-button-border-intensity: 9;  /* In terms of percentages */
+
+  --elevate-1: rgba(232, 191, 156, .08);
+  --elevate-2: rgba(232, 191, 156, .14);
+
+  --background: 20 22% 12%;
+
+  --foreground: 35 24% 92%;
+
+  --border: 20 12% 24%;
+
+  --card: 22 18% 16%;
+
+  --card-foreground: 35 22% 92%;
+
+  --card-border: 20 12% 24%;
+
+  --sidebar: 22 18% 14%;
+
+  --sidebar-foreground: 35 20% 88%;
+
+  --sidebar-border: 20 12% 24%;
+
+  --sidebar-primary: 20 22% 65%;
+
+  --sidebar-primary-foreground: 20 18% 12%;
+
+  --sidebar-accent: 28 38% 62%;
+
+  --sidebar-accent-foreground: 20 18% 14%;
+
+  --sidebar-ring: 20 22% 65%;
+
+  --popover: 22 16% 18%;
+
+  --popover-foreground: 35 24% 90%;
+
+  --popover-border: 20 12% 24%;
+
+  --primary: 20 22% 65%;
+
+  --primary-foreground: 20 18% 12%;
+
+  --secondary: 22 16% 22%;
+
+  --secondary-foreground: 35 24% 90%;
+
+  --muted: 22 16% 22%;
+
+  --muted-foreground: 150 8% 72%;
+
+  --accent: 28 38% 62%;
+
+  --accent-foreground: 20 18% 14%;
+
+  --destructive: 0 55% 48%;
+
+  --destructive-foreground: 0 5% 98%;
+
+  --eco: 75 40% 45%;
+  --eco-foreground: 75 60% 90%;
+
+  --input: 25 14% 26%;
+  --ring: 20 22% 65%;
+  --chart-1: 20 22% 65%;
+  --chart-2: 28 38% 62%;
+  --chart-3: 145 45% 58%;
+  --chart-4: 75 40% 45%;
+  --chart-5: 15 45% 62%;
+}
+
+:root {
+  --kruze-espresso: #3B2314;
+  --kruze-brown: #8A6959;
+  --kruze-peach: #E8BF9C;
+  --kruze-taupe: #C4B5A5;
+  --kruze-warmgray: #A09585;
+  --kruze-offwhite: #FAF8F5;
+  --kruze-green: #2C4A35;
+  --kruze-tgreen: #4A7C59;
+  --kruze-lgreen: #E6F0C7;
+  --kruze-jura: #7B8FA1;
+  --kruze-jura-dark: #5A6B7A;
+  --kruze-gift: #B8860B;
+
+  --kruze-coffee-gradient-from: #3B2314;
+  --kruze-coffee-gradient-to: #8A6959;
+  --kruze-tea-gradient-from: #2C4A35;
+  --kruze-tea-gradient-to: #4A7C59;
+
+  --kruze-coffee-image-bg: #F5EDE4;
+  --kruze-tea-image-bg: #EAF2E0;
+  --kruze-jura-image-bg: #E8ECF0;
+  --kruze-gift-image-bg: #FDF6E8;
+
+  --kruze-tag-coffee: #F5E6D3;
+  --kruze-tag-coffee-text: #6B4226;
+  --kruze-tag-tea-green: #D4EDDA;
+  --kruze-tag-tea-green-text: #2C4A35;
+  --kruze-tag-tea-black: #3B2314;
+  --kruze-tag-tea-black-text: #FFFFFF;
+  --kruze-tag-tea-oolong: #E8D5B7;
+  --kruze-tag-tea-oolong-text: #6B4226;
+  --kruze-tag-tea-white: #F0EDE8;
+  --kruze-tag-tea-white-text: #6B4226;
+  --kruze-tag-tea-puerh: #5C3A21;
+  --kruze-tag-tea-puerh-text: #FFFFFF;
+  --kruze-tag-tea-herbal: #E6F0C7;
+  --kruze-tag-tea-herbal-text: #3B5E28;
+  --kruze-tag-tea-rooibos: #D4A574;
+  --kruze-tag-tea-rooibos-text: #5C3A21;
+  --kruze-tag-jura: #7B8FA1;
+  --kruze-tag-jura-text: #FFFFFF;
+
+  --kruze-font-serif: 'Playfair Display', Georgia, serif;
+  --kruze-font-sans: 'DM Sans', 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans subpixel-antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+
+  /* Hide ugly search cancel button in Chrome until we can style it properly */
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  /* Placeholder styling for contentEditable div */
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  .no-default-hover-elevate {}
+
+  .no-default-active-elevate {}
+
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -1px;
+  }
+
+  .kruze-card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .kruze-card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(59, 35, 20, 0.12);
+  }
+
+  .kruze-image-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  .kruze-award-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    background-color: #DAA520;
+    color: #FFFFFF;
+    z-index: 1;
+  }
+
+  .kruze-seasonal-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 3px;
+    background-color: var(--kruze-tgreen);
+    color: #FFFFFF;
+    z-index: 1;
+  }
+
+  .kruze-sidebar-active {
+    font-weight: 700;
+    border-left: 3px solid var(--kruze-espresso);
+    background-color: var(--kruze-offwhite);
+  }
+
+  .kruze-section-line {
+    flex: 1;
+    height: 1px;
+    background-color: var(--kruze-taupe);
+    margin: 0 16px;
+  }
+}

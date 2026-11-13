@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2800 3200" width="2800" height="3200">
+  <defs>
+    <!-- Define marker for arrows -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333" />
+    </marker>
+    <marker id="arrowhead-dashed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2800" height="3200" fill="#FAFAFA"/>
+
+  <!-- Title -->
+  <text x="1400" y="60" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#333">
+    KRUZE Coffee &amp; Tea Omnichannel Management System
+  </text>
+  <text x="1400" y="90" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#666">
+    UML Use Case Diagram
+  </text>
+
+  <!-- ===================== PRIMARY ACTORS (LEFT SIDE) ===================== -->
+
+  <!-- Admin Actor -->
+  <g id="admin-actor">
+    <circle cx="100" cy="200" r="15" fill="#f5d7a1" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="215" x2="100" y2="250" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="230" x2="70" y2="260" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="230" x2="130" y2="260" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="250" x2="70" y2="290" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="250" x2="130" y2="290" stroke="#8A6959" stroke-width="2"/>
+    <text x="100" y="310" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Admin</text>
+  </g>
+
+  <!-- Authenticated Staff/Customer Actor -->
+  <g id="staff-actor">
+    <circle cx="100" cy="950" r="15" fill="#f5d7a1" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="965" x2="100" y2="1000" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="980" x2="70" y2="1010" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="980" x2="130" y2="1010" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="1000" x2="70" y2="1040" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="1000" x2="130" y2="1040" stroke="#8A6959" stroke-width="2"/>
+    <text x="100" y="1060" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Staff/</text>
+    <text x="100" y="1078" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Customer</text>
+  </g>
+
+  <!-- Guest/Unauthenticated User Actor -->
+  <g id="guest-actor">
+    <circle cx="100" cy="1420" r="15" fill="#f5d7a1" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="1435" x2="100" y2="1470" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="1450" x2="70" y2="1480" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="1450" x2="130" y2="1480" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="1470" x2="70" y2="1510" stroke="#8A6959" stroke-width="2"/>
+    <line x1="100" y1="1470" x2="130" y2="1510" stroke="#8A6959" stroke-width="2"/>
+    <text x="100" y="1530" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Guest User</text>
+  </g>
+
+  <!-- Loyalty App User Actor (Future) -->
+  <g id="loyalty-actor">
+    <circle cx="100" cy="1780" r="15" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <line x1="100" y1="1795" x2="100" y2="1830" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <line x1="100" y1="1810" x2="70" y2="1840" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <line x1="100" y1="1810" x2="130" y2="1840" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <line x1="100" y1="1830" x2="70" y2="1870" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <line x1="100" y1="1830" x2="130" y2="1870" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="100" y="1890" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#0066cc">Loyalty User</text>
+    <text x="100" y="1908" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">(Future)</text>
+  </g>
+
+  <!-- ===================== SECONDARY ACTORS (RIGHT SIDE) ===================== -->
+
+  <!-- Resend Email Service -->
+  <g id="resend-actor">
+    <rect x="2620" y="200" width="120" height="60" fill="#d4e4f7" stroke="#5B8DBE" stroke-width="2" rx="5"/>
+    <text x="2680" y="225" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">«external»</text>
+    <text x="2680" y="242" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Resend</text>
+    <text x="2680" y="256" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">(Email)</text>
+  </g>
+
+  <!-- Neon Database -->
+  <g id="database-actor">
+    <rect x="2620" y="300" width="120" height="60" fill="#d4e4f7" stroke="#5B8DBE" stroke-width="2" rx="5"/>
+    <text x="2680" y="325" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">«external»</text>
+    <text x="2680" y="342" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Neon DB</text>
+    <text x="2680" y="356" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">(PostgreSQL)</text>
+  </g>
+
+  <!-- Replit Auth -->
+  <g id="auth-actor">
+    <rect x="2620" y="400" width="120" height="60" fill="#d4e4f7" stroke="#5B8DBE" stroke-width="2" rx="5"/>
+    <text x="2680" y="425" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">«external»</text>
+    <text x="2680" y="442" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Replit Auth</text>
+    <text x="2680" y="456" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">(OIDC)</text>
+  </g>
+
+  <!-- Session Store -->
+  <g id="session-actor">
+    <rect x="2620" y="500" width="120" height="60" fill="#d4e4f7" stroke="#5B8DBE" stroke-width="2" rx="5"/>
+    <text x="2680" y="525" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">«external»</text>
+    <text x="2680" y="542" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">PG Sessions</text>
+    <text x="2680" y="556" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">(Store)</text>
+  </g>
+
+  <!-- Replit Connectors -->
+  <g id="connectors-actor">
+    <rect x="2620" y="600" width="120" height="60" fill="#d4e4f7" stroke="#5B8DBE" stroke-width="2" rx="5"/>
+    <text x="2680" y="625" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">«external»</text>
+    <text x="2680" y="642" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Connectors</text>
+    <text x="2680" y="656" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">(Config)</text>
+  </g>
+
+  <!-- PDFKit Service -->
+  <g id="pdf-actor">
+    <rect x="2620" y="700" width="120" height="60" fill="#d4e4f7" stroke="#5B8DBE" stroke-width="2" rx="5"/>
+    <text x="2680" y="725" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">«library»</text>
+    <text x="2680" y="742" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">PDFKit</text>
+    <text x="2680" y="756" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">(PDF Gen)</text>
+  </g>
+
+  <!-- ===================== ADMIN DASHBOARD INTERFACE ===================== -->
+
+  <g id="admin-interface">
+    <!-- Interface boundary box -->
+    <rect x="220" y="150" width="580" height="780" fill="none" stroke="#8A6959" stroke-width="3" rx="8"/>
+    <text x="510" y="175" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#8A6959">Admin Dashboard</text>
+
+    <!-- Use Cases in Admin -->
+    <!-- Row 1 -->
+    <ellipse cx="350" cy="220" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="226" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Products</text>
+
+    <ellipse cx="550" cy="220" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="226" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Product</text>
+    <text x="550" y="238" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Images</text>
+
+    <!-- Row 2 -->
+    <ellipse cx="350" cy="280" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">View Product</text>
+    <text x="350" y="292" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Statistics</text>
+
+    <ellipse cx="550" cy="280" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="286" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Sales Prices</text>
+
+    <!-- Row 3 -->
+    <ellipse cx="350" cy="340" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="346" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Customers</text>
+
+    <ellipse cx="550" cy="340" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="340" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">View Customer</text>
+    <text x="550" y="352" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Statistics</text>
+
+    <!-- Row 4 -->
+    <ellipse cx="350" cy="400" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="400" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Customer</text>
+    <text x="350" y="412" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Pricing</text>
+
+    <ellipse cx="550" cy="400" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="406" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Sales</text>
+
+    <!-- Row 5 -->
+    <ellipse cx="350" cy="460" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="466" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Generate Invoice PDF</text>
+
+    <ellipse cx="550" cy="460" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="466" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Send Invoice Email</text>
+
+    <!-- Row 6 -->
+    <ellipse cx="350" cy="520" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="526" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Suppliers</text>
+
+    <ellipse cx="550" cy="520" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="520" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Supplier</text>
+    <text x="550" y="532" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Orders</text>
+
+    <!-- Row 7 -->
+    <ellipse cx="350" cy="580" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="580" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Confirm Supplier</text>
+    <text x="350" y="592" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Order</text>
+
+    <ellipse cx="550" cy="580" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="580" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Stock</text>
+    <text x="550" y="592" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Movements</text>
+
+    <!-- Row 8 -->
+    <ellipse cx="350" cy="640" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="646" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Roasts</text>
+
+    <ellipse cx="550" cy="640" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="646" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Settings</text>
+
+    <!-- Row 9 -->
+    <ellipse cx="350" cy="700" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="706" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">View Analytics</text>
+
+    <ellipse cx="550" cy="700" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="700" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Roast</text>
+    <text x="550" y="712" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Configurations</text>
+
+    <!-- Row 10 -->
+    <ellipse cx="350" cy="760" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="760" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Product</text>
+    <text x="350" y="772" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Components</text>
+
+    <ellipse cx="550" cy="760" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="766" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Buying Prices</text>
+
+    <!-- Row 11 -->
+    <ellipse cx="450" cy="820" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="450" y="826" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Update Sale Status</text>
+
+    <!-- Row 12 -->
+    <ellipse cx="450" cy="880" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="450" y="880" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Review Invoice</text>
+    <text x="450" y="892" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Moderation</text>
+  </g>
+
+  <!-- Admin connection - thick line to interface boundary (uses all) -->
+  <line x1="130" y1="250" x2="220" y2="250" stroke="#8A6959" stroke-width="3"/>
+  <text x="175" y="245" font-family="Arial, sans-serif" font-size="11" fill="#8A6959" text-anchor="middle">uses all</text>
+
+  <!-- ===================== POS SYSTEM INTERFACE ===================== -->
+
+  <g id="pos-interface">
+    <!-- Interface boundary box -->
+    <rect x="220" y="960" width="580" height="420" fill="none" stroke="#8A6959" stroke-width="3" rx="8"/>
+    <text x="510" y="985" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#8A6959">POS System</text>
+
+    <!-- Use Cases in POS -->
+    <!-- Row 1 -->
+    <ellipse cx="350" cy="1030" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="1030" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Browse Products</text>
+    <text x="350" y="1042" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">with Variants</text>
+
+    <ellipse cx="550" cy="1030" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="1036" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Search Customers</text>
+
+    <!-- Row 2 -->
+    <ellipse cx="350" cy="1100" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="1100" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Register New</text>
+    <text x="350" y="1112" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Customer</text>
+
+    <ellipse cx="550" cy="1100" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="1106" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Create POS Sale</text>
+
+    <!-- Row 3 -->
+    <ellipse cx="350" cy="1170" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="1176" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">View Receipt</text>
+
+    <ellipse cx="550" cy="1170" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="1170" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">View Daily Sales</text>
+    <text x="550" y="1182" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Report</text>
+
+    <!-- Row 4 -->
+    <ellipse cx="450" cy="1240" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="450" y="1240" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Apply Customer</text>
+    <text x="450" y="1252" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Pricing</text>
+
+    <!-- Row 5 -->
+    <ellipse cx="450" cy="1310" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="450" y="1316" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Process Payments</text>
+  </g>
+
+  <!-- Staff connection - thick line to interface boundary (uses all) -->
+  <line x1="130" y1="1000" x2="220" y2="1000" stroke="#8A6959" stroke-width="3"/>
+  <text x="175" y="995" font-family="Arial, sans-serif" font-size="11" fill="#8A6959" text-anchor="middle">uses all</text>
+
+  <!-- ===================== STOREFRONT INTERFACE ===================== -->
+
+  <g id="storefront-interface">
+    <!-- Interface boundary box -->
+    <rect x="220" y="1410" width="580" height="240" fill="none" stroke="#8A6959" stroke-width="3" rx="8"/>
+    <text x="510" y="1435" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#8A6959">E-Commerce Storefront</text>
+
+    <!-- Use Cases in Storefront -->
+    <!-- Row 1 -->
+    <ellipse cx="350" cy="1490" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="1496" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Browse Products</text>
+
+    <ellipse cx="550" cy="1490" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="1490" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">View Product</text>
+    <text x="550" y="1502" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Details</text>
+
+    <!-- Row 2 -->
+    <ellipse cx="350" cy="1570" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="350" y="1570" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Shopping</text>
+    <text x="350" y="1582" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Cart</text>
+
+    <ellipse cx="550" cy="1570" rx="100" ry="30" fill="#E8BF9C" stroke="#8A6959" stroke-width="2"/>
+    <text x="550" y="1576" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Checkout</text>
+  </g>
+
+  <!-- Guest connection - thick line to interface boundary (uses all) -->
+  <line x1="130" y1="1470" x2="220" y2="1470" stroke="#8A6959" stroke-width="3"/>
+  <text x="175" y="1465" font-family="Arial, sans-serif" font-size="11" fill="#8A6959" text-anchor="middle">uses all</text>
+
+  <!-- ===================== LOYALTY APP INTERFACE (FUTURE) ===================== -->
+
+  <g id="loyalty-interface">
+    <!-- Interface boundary box (dashed blue for future) -->
+    <rect x="220" y="1690" width="580" height="500" fill="#e8f4f8" stroke="#0066cc" stroke-width="3" stroke-dasharray="5,5" rx="8"/>
+    <text x="510" y="1715" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#0066cc">Loyalty App (Future)</text>
+
+    <!-- Use Cases in Loyalty App -->
+    <!-- Row 1 -->
+    <ellipse cx="350" cy="1760" rx="100" ry="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="350" y="1760" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Email Verification</text>
+    <text x="350" y="1772" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Login</text>
+
+    <ellipse cx="550" cy="1760" rx="100" ry="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="550" y="1760" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">View Purchase</text>
+    <text x="550" y="1772" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">History</text>
+
+    <!-- Row 2 -->
+    <ellipse cx="350" cy="1830" rx="100" ry="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="350" y="1836" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Earn Points</text>
+
+    <ellipse cx="550" cy="1830" rx="100" ry="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="550" y="1830" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">View &amp; Unlock</text>
+    <text x="550" y="1842" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Badges</text>
+
+    <!-- Row 3 -->
+    <ellipse cx="350" cy="1900" rx="100" ry="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="350" y="1900" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Participate in</text>
+    <text x="350" y="1912" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Challenges</text>
+
+    <ellipse cx="550" cy="1900" rx="100" ry="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="550" y="1906" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Redeem Rewards</text>
+
+    <!-- Row 4 -->
+    <ellipse cx="350" cy="1970" rx="100" ry="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="350" y="1976" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">View Daily Tips</text>
+
+    <ellipse cx="550" cy="1970" rx="100" ry="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="550" y="1970" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Access Brewing</text>
+    <text x="550" y="1982" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Guides</text>
+
+    <!-- Row 5 -->
+    <ellipse cx="350" cy="2040" rx="100" ry="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="350" y="2040" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Submit Product</text>
+    <text x="350" y="2052" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Reviews</text>
+
+    <ellipse cx="550" cy="2040" rx="100" ry="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="550" y="2046" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Manage Profile</text>
+
+    <!-- Row 6 -->
+    <ellipse cx="450" cy="2110" rx="100" ry="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="450" y="2110" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Link Multiple</text>
+    <text x="450" y="2122" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0066cc">Emails</text>
+  </g>
+
+  <!-- Loyalty User connection - thick dashed line to interface boundary (uses all) -->
+  <line x1="130" y1="1830" x2="220" y2="1830" stroke="#0066cc" stroke-width="3" stroke-dasharray="5,5"/>
+  <text x="175" y="1825" font-family="Arial, sans-serif" font-size="11" fill="#0066cc" text-anchor="middle">uses all</text>
+
+  <!-- ===================== BACKEND SERVICES ===================== -->
+
+  <g id="backend-services">
+    <!-- Backend services boundary box (dashed) -->
+    <rect x="850" y="150" width="520" height="720" fill="none" stroke="#CCA693" stroke-width="3" stroke-dasharray="10,5" rx="8"/>
+    <text x="1110" y="175" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#CCA693">Backend Services</text>
+
+    <!-- Row 1 -->
+    <ellipse cx="980" cy="220" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="980" y="226" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Authenticate User</text>
+
+    <ellipse cx="1240" cy="220" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="1240" y="220" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Generate Invoice</text>
+    <text x="1240" y="232" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Number</text>
+
+    <!-- Row 2 -->
+    <ellipse cx="980" cy="290" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="980" y="290" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Calculate Customer</text>
+    <text x="980" y="302" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Statistics</text>
+
+    <ellipse cx="1240" cy="290" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="1240" y="290" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Calculate Product</text>
+    <text x="1240" y="302" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Statistics</text>
+
+    <!-- Row 3 -->
+    <ellipse cx="980" cy="360" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="980" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Track Stock</text>
+    <text x="980" y="372" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Movements</text>
+
+    <ellipse cx="1240" cy="360" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="1240" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Create Roast Stock</text>
+    <text x="1240" y="372" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Movements</text>
+
+    <!-- Row 4 -->
+    <ellipse cx="980" cy="430" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="980" y="430" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage System</text>
+    <text x="980" y="442" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Parameters</text>
+
+    <ellipse cx="1240" cy="430" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="1240" y="436" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Generate PDF Invoice</text>
+
+    <!-- Row 5 -->
+    <ellipse cx="980" cy="500" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="980" y="500" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Send Email</text>
+    <text x="980" y="512" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Invoice</text>
+
+    <ellipse cx="1240" cy="500" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="1240" y="506" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Validate Payments</text>
+
+    <!-- Row 6 -->
+    <ellipse cx="980" cy="570" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="980" y="570" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Calculate Sale</text>
+    <text x="980" y="582" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Totals</text>
+
+    <ellipse cx="1240" cy="570" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="1240" y="570" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Apply B2B/B2C</text>
+    <text x="1240" y="582" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Pricing</text>
+
+    <!-- Row 7 -->
+    <ellipse cx="980" cy="640" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="980" y="646" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Manage Sessions</text>
+
+    <ellipse cx="1240" cy="640" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="1240" y="640" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Generate Sales</text>
+    <text x="1240" y="652" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Reports</text>
+
+    <!-- Row 8 -->
+    <ellipse cx="980" cy="710" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="980" y="710" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Validate Product</text>
+    <text x="980" y="722" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Data</text>
+
+    <ellipse cx="1240" cy="710" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="1240" y="710" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Calculate VAT</text>
+    <text x="1240" y="722" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Breakdown</text>
+
+    <!-- Row 9 -->
+    <ellipse cx="1110" cy="780" rx="100" ry="30" fill="#CCA693" stroke="#8A6959" stroke-width="2"/>
+    <text x="1110" y="780" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Format Currency</text>
+    <text x="1110" y="792" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">(nl-BE)</text>
+  </g>
+
+  <!-- ===================== RELATIONSHIPS ===================== -->
+
+  <!-- <<include>> relationships (dashed lines) -->
+
+  <!-- Generate Invoice PDF includes Send Email Invoice -->
+  <line x1="450" y1="460" x2="880" y2="500" stroke="#666" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-dashed)"/>
+  <text x="665" y="470" font-family="Arial, sans-serif" font-size="11" fill="#666">«include»</text>
+
+  <!-- Send Invoice Email includes Generate PDF Invoice -->
+  <line x1="650" y1="460" x2="1140" y2="430" stroke="#666" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-dashed)"/>
+  <text x="895" y="440" font-family="Arial, sans-serif" font-size="11" fill="#666">«include»</text>
+
+  <!-- Create POS Sale includes Track Stock Movements -->
+  <line x1="650" y1="1100" x2="880" y2="360" stroke="#666" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-dashed)"/>
+  <text x="765" y="730" font-family="Arial, sans-serif" font-size="11" fill="#666">«include»</text>
+
+  <!-- Create POS Sale includes Generate Invoice Number -->
+  <line x1="650" y1="1100" x2="1140" y2="220" stroke="#666" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-dashed)"/>
+  <text x="895" y="660" font-family="Arial, sans-serif" font-size="11" fill="#666">«include»</text>
+
+  <!-- Update Sale Status includes Track Stock Movements -->
+  <line x1="550" y1="820" x2="880" y2="360" stroke="#666" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-dashed)"/>
+  <text x="715" y="590" font-family="Arial, sans-serif" font-size="11" fill="#666">«include»</text>
+
+  <!-- Manage Roasts includes Create Roast Stock Movements -->
+  <line x1="450" y1="640" x2="1140" y2="360" stroke="#666" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-dashed)"/>
+  <text x="795" y="500" font-family="Arial, sans-serif" font-size="11" fill="#666">«include»</text>
+
+  <!-- Confirm Supplier Order includes Track Stock Movements -->
+  <line x1="450" y1="580" x2="880" y2="360" stroke="#666" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-dashed)"/>
+  <text x="665" y="470" font-family="Arial, sans-serif" font-size="11" fill="#666">«include»</text>
+
+  <!-- View Product Statistics includes Calculate Product Statistics -->
+  <line x1="450" y1="280" x2="1140" y2="290" stroke="#666" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-dashed)"/>
+  <text x="795" y="275" font-family="Arial, sans-serif" font-size="11" fill="#666">«include»</text>
+
+  <!-- View Customer Statistics includes Calculate Customer Statistics -->
+  <line x1="650" y1="340" x2="880" y2="290" stroke="#666" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-dashed)"/>
+  <text x="765" y="310" font-family="Arial, sans-serif" font-size="11" fill="#666">«include»</text>
+
+  <!-- <<extend>> relationships (dotted lines) -->
+
+  <!-- Register New Customer extends Create POS Sale -->
+  <line x1="450" y1="1100" x2="550" y2="1100" stroke="#666" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arrowhead-dashed)"/>
+  <text x="500" y="1090" font-family="Arial, sans-serif" font-size="11" fill="#666">«extend»</text>
+
+  <!-- Apply Customer Pricing extends Browse Products with Variants -->
+  <line x1="450" y1="1240" x2="450" y2="1060" stroke="#666" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arrowhead-dashed)"/>
+  <text x="465" y="1150" font-family="Arial, sans-serif" font-size="11" fill="#666">«extend»</text>
+
+  <!-- ===================== CONNECTIONS TO EXTERNAL ACTORS ===================== -->
+
+  <!-- Backend Services to External Actors -->
+
+  <!-- Send Email Invoice to Resend -->
+  <line x1="1080" y1="500" x2="2620" y2="230" stroke="#5B8DBE" stroke-width="2"/>
+
+  <!-- Authenticate User to Replit Auth -->
+  <line x1="1080" y1="220" x2="2620" y2="430" stroke="#5B8DBE" stroke-width="2"/>
+
+  <!-- Manage Sessions to Session Store -->
+  <line x1="1080" y1="640" x2="2620" y2="530" stroke="#5B8DBE" stroke-width="2"/>
+
+  <!-- Generate PDF Invoice to PDFKit -->
+  <line x1="1340" y1="430" x2="2620" y2="730" stroke="#5B8DBE" stroke-width="2"/>
+
+  <!-- Backend Services to Database (thick line - all services use it) -->
+  <line x1="1370" y1="350" x2="2620" y2="330" stroke="#5B8DBE" stroke-width="3"/>
+  <text x="1995" y="325" font-family="Arial, sans-serif" font-size="11" fill="#5B8DBE" text-anchor="middle">uses all</text>
+
+  <!-- ===================== LEGEND ===================== -->
+
+  <g id="legend">
+    <rect x="150" y="2280" width="650" height="280" fill="#F9F9F9" stroke="#666" stroke-width="2" rx="5"/>
+    <text x="475" y="2310" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Legend</text>
+
+    <!-- Interface connection -->
+    <line x1="180" y1="2340" x2="270" y2="2340" stroke="#8A6959" stroke-width="3"/>
+    <text x="285" y="2345" font-family="Arial, sans-serif" font-size="12" fill="#333">Interface connection (uses all)</text>
+
+    <!-- Specific use case connection -->
+    <line x1="180" y1="2370" x2="270" y2="2370" stroke="#333" stroke-width="2"/>
+    <text x="285" y="2375" font-family="Arial, sans-serif" font-size="12" fill="#333">Specific use case connection</text>
+
+    <!-- Include relationship -->
+    <line x1="180" y1="2400" x2="270" y2="2400" stroke="#666" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-dashed)"/>
+    <text x="285" y="2405" font-family="Arial, sans-serif" font-size="12" fill="#333">«include» relationship (required)</text>
+
+    <!-- Extend relationship -->
+    <line x1="180" y1="2430" x2="270" y2="2430" stroke="#666" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arrowhead-dashed)"/>
+    <text x="285" y="2435" font-family="Arial, sans-serif" font-size="12" fill="#333">«extend» relationship (optional)</text>
+
+    <!-- Future feature indicator -->
+    <rect x="180" y="2450" width="90" height="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="2" stroke-dasharray="5,5" rx="3"/>
+    <text x="285" y="2470" font-family="Arial, sans-serif" font-size="12" fill="#333">Future/Planned feature</text>
+
+    <!-- Interface boundary -->
+    <rect x="180" y="2495" width="90" height="40" fill="none" stroke="#8A6959" stroke-width="2" rx="3"/>
+    <text x="285" y="2520" font-family="Arial, sans-serif" font-size="12" fill="#333">Interface/System boundary</text>
+  </g>
+
+  <!-- ===================== NOTES ===================== -->
+
+  <g id="notes">
+    <rect x="850" y="920" width="950" height="420" fill="#F9F9F9" stroke="#666" stroke-width="2" rx="5"/>
+    <text x="1325" y="950" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">System Notes &amp; Architecture</text>
+
+    <!-- Key Points -->
+    <text x="870" y="980" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Key Architectural Points:</text>
+    <text x="870" y="1005" font-family="Arial, sans-serif" font-size="12" fill="#333">• Three-interface architecture: Admin Dashboard, POS System, and E-Commerce Storefront</text>
+    <text x="870" y="1025" font-family="Arial, sans-serif" font-size="12" fill="#333">• Clean architecture pattern with layered backend services (Routes → Services → Storage → Database)</text>
+    <text x="870" y="1045" font-family="Arial, sans-serif" font-size="12" fill="#333">• Comprehensive inventory tracking with stock movement reasons (BUY, SELL, ROAST, CORRECTION)</text>
+    <text x="870" y="1065" font-family="Arial, sans-serif" font-size="12" fill="#333">• Dual pricing system: B2B (with invoice numbers) and B2C (guest checkout)</text>
+    <text x="870" y="1085" font-family="Arial, sans-serif" font-size="12" fill="#333">• Customer-specific pricing overrides for B2B clients</text>
+    <text x="870" y="1105" font-family="Arial, sans-serif" font-size="12" fill="#333">• Automated stock movements upon: Sale status update, Supplier order confirmation, Roast creation</text>
+    <text x="870" y="1125" font-family="Arial, sans-serif" font-size="12" fill="#333">• Professional PDF invoice generation with Belgian VAT compliance (6% &amp; 21% rates)</text>
+    <text x="870" y="1145" font-family="Arial, sans-serif" font-size="12" fill="#333">• Coffee roasting workflow: Green coffee → Roast batch → Roasted product (with stock tracking)</text>
+
+    <!-- Technology Stack -->
+    <text x="870" y="1180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Technology Stack:</text>
+    <text x="870" y="1205" font-family="Arial, sans-serif" font-size="12" fill="#333">• Frontend: React 18.3, TypeScript 5.6, Vite 5.4, TailwindCSS 3.4, Radix UI, TanStack Query 5.90</text>
+    <text x="870" y="1225" font-family="Arial, sans-serif" font-size="12" fill="#333">• Backend: Node.js, Express 4.21, TypeScript, Drizzle ORM 0.39, Passport.js</text>
+    <text x="870" y="1245" font-family="Arial, sans-serif" font-size="12" fill="#333">• Database: PostgreSQL (Neon serverless) with WebSocket connection pooling</text>
+    <text x="870" y="1265" font-family="Arial, sans-serif" font-size="12" fill="#333">• Authentication: Replit Auth (OpenID Connect) with 7-day session TTL</text>
+    <text x="870" y="1285" font-family="Arial, sans-serif" font-size="12" fill="#333">• Security: Helmet, CORS, Rate Limiting, CSRF protection, Input validation</text>
+    <text x="870" y="1305" font-family="Arial, sans-serif" font-size="12" fill="#333">• Integrations: Resend (email), PDFKit (invoice generation), Replit Connectors (credential management)</text>
+
+    <!-- Future Plans -->
+    <text x="1450" y="980" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0066cc">Future Roadmap (Loyalty App):</text>
+    <text x="1450" y="1005" font-family="Arial, sans-serif" font-size="12" fill="#0066cc">• 5-phase implementation starting with MVP</text>
+    <text x="1450" y="1025" font-family="Arial, sans-serif" font-size="12" fill="#0066cc">• Email verification authentication</text>
+    <text x="1450" y="1045" font-family="Arial, sans-serif" font-size="12" fill="#0066cc">• Points system (1 point per €1 spent)</text>
+    <text x="1450" y="1065" font-family="Arial, sans-serif" font-size="12" fill="#0066cc">• Gamification: Badges &amp; challenges</text>
+    <text x="1450" y="1085" font-family="Arial, sans-serif" font-size="12" fill="#0066cc">• Rewards shop with QR vouchers</text>
+    <text x="1450" y="1105" font-family="Arial, sans-serif" font-size="12" fill="#0066cc">• Educational content hub</text>
+    <text x="1450" y="1125" font-family="Arial, sans-serif" font-size="12" fill="#0066cc">• Product review system</text>
+    <text x="1450" y="1145" font-family="Arial, sans-serif" font-size="12" fill="#0066cc">• Multi-email account linking</text>
+
+    <text x="1450" y="1180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Active Refactoring:</text>
+    <text x="1450" y="1205" font-family="Arial, sans-serif" font-size="12" fill="#333">• 19 architectural issues identified</text>
+    <text x="1450" y="1225" font-family="Arial, sans-serif" font-size="12" fill="#333">• Query optimization (4x faster products)</text>
+    <text x="1450" y="1245" font-family="Arial, sans-serif" font-size="12" fill="#333">• Service layer completion (40-60 hrs)</text>
+    <text x="1450" y="1265" font-family="Arial, sans-serif" font-size="12" fill="#333">• Reference: roastService.ts pattern</text>
+  </g>
+
+  <!-- ===================== BRAND COLORS REFERENCE ===================== -->
+
+  <g id="color-reference">
+    <rect x="1450" y="2280" width="350" height="280" fill="#F9F9F9" stroke="#666" stroke-width="2" rx="5"/>
+    <text x="1625" y="2310" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">KRUZE Brand Colors</text>
+
+    <rect x="1470" y="2330" width="40" height="30" fill="#8A6959" stroke="#333" stroke-width="1"/>
+    <text x="1520" y="2350" font-family="Arial, sans-serif" font-size="12" fill="#333">Primary Brown (#8A6959)</text>
+
+    <rect x="1470" y="2370" width="40" height="30" fill="#E8BF9C" stroke="#333" stroke-width="1"/>
+    <text x="1520" y="2390" font-family="Arial, sans-serif" font-size="12" fill="#333">Soft Peach (#E8BF9C)</text>
+
+    <rect x="1470" y="2410" width="40" height="30" fill="#CCA693" stroke="#333" stroke-width="1"/>
+    <text x="1520" y="2430" font-family="Arial, sans-serif" font-size="12" fill="#333">Golden Beige (#CCA693)</text>
+
+    <rect x="1470" y="2450" width="40" height="30" fill="#F1F2ED" stroke="#333" stroke-width="1"/>
+    <text x="1520" y="2470" font-family="Arial, sans-serif" font-size="12" fill="#333">Off-White (#F1F2ED)</text>
+
+    <rect x="1470" y="2490" width="40" height="30" fill="#e8f4f8" stroke="#0066cc" stroke-width="1"/>
+    <text x="1520" y="2510" font-family="Arial, sans-serif" font-size="12" fill="#333">Future Features (#e8f4f8)</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="1400" y="3150" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+    Generated: 2025-11-03 | KRUZE Coffee &amp; Tea Omnichannel Management System | PostgreSQL + React + Express
+  </text>
+
+</svg>

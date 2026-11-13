@@ -1,0 +1,66 @@
+body.storefront-theme,
+body[data-surface="storefront"] {
+  --button-outline: rgba(106, 84, 70, 0.12);
+  --badge-outline: rgba(106, 84, 70, 0.08);
+  --opaque-button-border-intensity: -6;
+  --elevate-1: rgba(106, 84, 70, 0.05);
+  --elevate-2: rgba(106, 84, 70, 0.1);
+  --background: 60 24% 96%; /* #F1F2ED */
+  --foreground: 27 24% 26%; /* grounded espresso copy */
+  --border: 36 18% 86%; /* soft warm taupe */
+  --card: 45 20% 94%; /* parchment wash */
+  --card-foreground: 27 24% 26%;
+  --card-border: 36 18% 86%;
+  --sidebar: 45 20% 94%;
+  --sidebar-foreground: 27 24% 30%;
+  --sidebar-border: 36 18% 86%;
+  --sidebar-primary: 24 25% 46%; /* #8A6959 */
+  --sidebar-primary-foreground: 60 24% 98%;
+  --sidebar-accent: 33 24% 72%; /* #C2B197 */
+  --sidebar-accent-foreground: 27 24% 26%;
+  --sidebar-ring: 24 25% 46%;
+  --popover: 60 24% 98%;
+  --popover-foreground: 27 24% 26%;
+  --popover-border: 36 18% 86%;
+  --primary: 24 25% 46%;
+  --primary-foreground: 60 24% 98%;
+  --secondary: 52 13% 80%; /* neutral taupe blend */
+  --secondary-foreground: 27 24% 26%;
+  --muted: 70 7% 64%; /* warm grey */
+  --muted-foreground: 70 9% 38%;
+  --accent: 19 32% 66%; /* #CCA693 premium accent */
+  --accent-foreground: 24 32% 20%;
+  --destructive: 2 65% 48%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 36 18% 86%;
+  --ring: 24 25% 46%;
+  --chart-1: 24 25% 46%;
+  --chart-2: 52 13% 80%;
+  --chart-3: 82 56% 84%; /* #E6F0C7 */
+  --chart-4: 70 7% 64%;
+  --chart-5: 19 32% 66%;
+  --eco: 82 56% 84%;
+  --eco-foreground: 82 30% 30%;
+  --font-sans: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+body.storefront-theme .font-serif,
+body.storefront-theme [class*="font-serif"],
+body[data-surface="storefront"] .font-serif,
+body[data-surface="storefront"] [class*="font-serif"] {
+  font-family: var(--font-serif);
+}
+
+body.storefront-theme .font-sans,
+body.storefront-theme [class*="font-sans"],
+body[data-surface="storefront"] .font-sans,
+body[data-surface="storefront"] [class*="font-sans"] {
+  font-family: var(--font-sans);
+}

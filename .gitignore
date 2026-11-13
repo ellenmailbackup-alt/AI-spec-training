@@ -1,0 +1,13 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+
+# training copy
+coverage/
+tmp/
+.claude/settings.local.json
+*.sql.bak
+data_export*.sql
