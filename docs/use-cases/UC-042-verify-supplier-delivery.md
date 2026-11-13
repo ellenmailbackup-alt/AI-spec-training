@@ -63,9 +63,9 @@ None.
 - **UC-041:** Consult Supplier Orders -- read-only consultation of order details.
 
 ## Implementation Notes
-- Known gap against BR-5: the confirmation and the stock movement recording do not run in a single transaction. If stock movement recording fails partway through, the order stays confirmed while some stock movements are missing. Moving this logic into a service with a database transaction closes the gap.
-- Known gap against BR-2: the backend does not validate that the order has line items before confirming. Only the UI enforces the rule, by disabling the confirm action when the order has no lines.
-- Known gap against BR-3a–BR-3d: the backend does not check the confirmed status on `PATCH`/`DELETE /api/supplier-orders/:id` or on the supplier order line routes (`POST /api/supplier-orders/:orderId/lines`, `PATCH`/`DELETE /api/supplier-order-lines/:id`). Only the UI prevents changes to a confirmed order.
+- Known gap against BR-5 (ISS-005): the confirmation and the stock movement recording do not run in a single transaction. If stock movement recording fails partway through, the order stays confirmed while some stock movements are missing. Moving this logic into a service with a database transaction closes the gap.
+- Known gap against BR-2 (ISS-017): the backend does not validate that the order has line items before confirming. Only the UI enforces the rule, by disabling the confirm action when the order has no lines.
+- Known gap against BR-3a–BR-3d (ISS-018 for BR-3a/3b/3d, ISS-004 for BR-3c): the backend does not check the confirmed status on `PATCH`/`DELETE /api/supplier-orders/:id` or on the supplier order line routes (`POST /api/supplier-orders/:orderId/lines`, `PATCH`/`DELETE /api/supplier-order-lines/:id`). Only the UI prevents changes to a confirmed order.
 - The current rejection text for EF-2 is "Order is already confirmed" (HTTP 400).
 - The stock movement date is today's date at confirmation time, not the order date (BR-1b).
 
