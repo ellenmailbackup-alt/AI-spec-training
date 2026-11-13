@@ -42,6 +42,7 @@ All project rules, standards, and workflows live in `.claude/skills/` and are lo
 | "review use case", "check UC-NNN", "QA the use case" | `/review-use-case` | review agent |
 | "review stories", "check stories", "QA the stories" | `/review-stories` | review agent |
 | "review tests", "check test coverage", "QA the tests" | `/review-tests` | review agent |
+| "check requirements", "are these requirements well written?", "requirements quality" | `/check-requirements` | requirements-quality agent (7 writing rules) |
 | "SEO audit", "improve SEO", "check SEO" | `/seo-review` | storefront SEO check |
 | "create a spec for..." | `/generate-spec` | spec agent |
 | "create a use case for..." | `/create-use-case` | analyst agent |
