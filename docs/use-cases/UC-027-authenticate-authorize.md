@@ -28,6 +28,7 @@ A user provides their credentials to gain access to the system. The system verif
 - **AF-1: Customer Login** — A customer signs in via the storefront. The system grants access only to storefront features and the customer's own account.
 - **AF-2: Token Refresh** — The user's session is near expiration. The system renews the session transparently without interrupting the user.
 - **AF-3: Logout** — The user indicates they want to sign out. The system ends the session and returns the user to the login page.
+- **AF-4: Customer Registration** — At step 1, instead of logging in, a visitor registers a customer account on the storefront. After the authentication service has registered the account, the system adds a digital loyalty card for the new customer (see UC-043 BR-1, UC-047). The use case ends; the customer can log in as described in AF-1.
 
 ## Exception Flows
 - **EF-1: Invalid Credentials** — The authentication service rejects the provided credentials. The system shows an "Invalid email or password" message.

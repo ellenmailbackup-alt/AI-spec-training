@@ -15,7 +15,7 @@ A registered user opens their account page to view and update their personal inf
 
 ## Main Flow
 1. The registered user navigates to their account page.
-2. The system displays the account page with three sections: profile information, order history, and most-ordered products.
+2. The system displays the account page with four sections: profile information, order history, most-ordered products, and loyalty card.
 3. The registered user opens the profile section.
 4. The system shows the current profile information: first name, last name, email address, phone number, date of birth, billing address, shipping address, and optional company details (company name, VAT number).
 5. The registered user updates one or more fields and saves.
@@ -34,6 +34,9 @@ From the most-ordered products section, the registered user adds a previously pu
 
 ### AF-4: Logout
 The registered user chooses to sign out. The system ends the session and returns the user to the public storefront. See UC-027 for the full logout flow.
+
+### AF-5: Loyalty Card
+The registered user opens the loyalty card section. The system shows the loyalty card and the stamp history as described in UC-047. From there the user can link a printed loyalty card (see UC-044).
 
 ## Exception Flows
 - **EF-1: Validation Error** — A submitted profile field contains invalid data (e.g., empty required field). The system highlights the field and shows a descriptive error message. The profile is not saved.

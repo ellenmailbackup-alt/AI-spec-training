@@ -37,6 +37,7 @@ A webshop visitor completes a purchase by providing their order details and payi
 - **AF-2: Payment Pending** — Some payment methods (e.g. bank transfer) have delayed confirmation. The order remains in a pending state until confirmation arrives.
 - **AF-3: Authenticated Customer** — A logged-in customer's address and contact details are pre-filled from their profile.
 - **AF-4: B2B Customer** — Company name and VAT number are captured for B2B invoicing.
+- **AF-5: Loyalty Reward Applied** — At step 1, a logged-in customer whose loyalty card is full is offered one free product (see UC-045). If the customer accepts and chooses a product, the system adds it to the order as a line at 0 euro (VAT 0), and the flow continues at step 2. At step 8, when payment is started, the system reserves the required stamps for this order; at step 12, when the order is reported paid, the stamps are deducted and the stamps earned by the paid part are added (see UC-043). If payment fails, is cancelled or expires, the reservation is released.
 
 ## Exception Flows
 - **EF-1: Validation Error** — Required fields are missing or invalid. The system highlights the errors and prevents the visitor from proceeding.

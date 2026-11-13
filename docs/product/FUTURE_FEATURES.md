@@ -875,6 +875,21 @@ Acceptance Criteria:
 - Current page is highlighted.
 - Mobile navigation works.
 
+## 8. Loyalty Card Stamp Withdrawal on Cancellation or Refund
+
+### Overview
+Withdraw or return loyalty card stamps when a paid webshop order is cancelled or refunded (see UC-043, UC-045).
+
+### Business Requirements
+- Withdraw stamps earned by an order that is cancelled or refunded
+- Return stamps deducted for a redeemed reward when that order is cancelled or refunded
+- Depends on a webshop order cancel/refund capability, which does not exist yet
+
+### Implementation Priority
+**LOW** - Blocked until webshop orders can be cancelled or refunded
+
+---
+
 ## Implementation Roadmap
 
 ### ✅ Completed

@@ -1,7 +1,7 @@
 # KRUZE Coffee & Tea — Use Case Index
 
 **Last Updated:** 2026-11-13
-**Total Use Cases:** 40 (29 approved, 11 draft)
+**Total Use Cases:** 41 (29 approved, 12 draft)
 **Source:** `kruzeapp-use-case-diagram.drawio` (root), codebase analysis
 
 ---
@@ -101,14 +101,15 @@ This directory contains the structured use case documentation for the KRUZE Coff
 | [UC-034](UC-034-loyalty-redeem-rewards.md) | Redeem Loyalty Rewards | Customer / Loyalty | Could | Draft — Superseded by UC-045 |
 | [UC-035](UC-035-loyalty-challenges-tips.md) | Participate in Challenges and View Content | Customer / Gamification | Could | Draft |
 
-## Webshop Loyalty Card (UC-043 to UC-046)
+## Webshop Loyalty Card (UC-043 to UC-047)
 
 | ID | Title | Domain | Priority | Status |
 |----|-------|--------|----------|--------|
-| [UC-043](UC-043-collect-loyalty-card-stamps.md) | Collect Stamps on Loyalty Card (supersedes UC-032) | Customer / Storefront | Should | Draft |
+| [UC-043](UC-043-earn-stamps-on-paid-order.md) | Earn Stamps on Paid Order (supersedes UC-032) | Customer / Storefront | Should | Draft |
 | [UC-044](UC-044-link-physical-loyalty-card.md) | Link Physical Loyalty Card | Customer / Storefront | Should | Draft |
 | [UC-045](UC-045-redeem-full-loyalty-card.md) | Redeem Full Loyalty Card for Free Product (supersedes UC-034) | Customer / Storefront | Should | Draft |
 | [UC-046](UC-046-configure-loyalty-card-rules.md) | Configure Loyalty Card Rules | Customer / Operations | Should | Draft |
+| [UC-047](UC-047-view-loyalty-card.md) | View Loyalty Card and Stamp History | Customer / Storefront | Should | Draft |
 
 ---
 
@@ -126,7 +127,7 @@ This directory contains the structured use case documentation for the KRUZE Coff
 | **Security / Auth** | UC-027 | Complete |
 | **Operations / Config** | UC-012, UC-015, UC-016, UC-029 | Complete |
 | **Loyalty (Future)** | UC-031, UC-032 (superseded), UC-033, UC-034 (superseded), UC-035 | Draft |
-| **Webshop Loyalty Card** | UC-043, UC-044, UC-045, UC-046 | Draft |
+| **Webshop Loyalty Card** | UC-043, UC-044, UC-045, UC-046, UC-047 | Draft |
 
 ---
 
