@@ -34,6 +34,8 @@ Split the source into individual requirement sentences:
 
 Ignore headings, metadata, and explanatory prose that is not a requirement. Record the location (file:line or criterion number) for each sentence.
 
+**Line numbers must be exact** — take them from the line numbers shown by the Read tool (1-based); never estimate or count manually. Double-check each `file:line` before reporting.
+
 ## Step 3 — Check Each Sentence Against All 7 Rules
 
 | # | Rule | Look for |

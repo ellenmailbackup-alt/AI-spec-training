@@ -46,6 +46,8 @@ A conjunction usually means two requirements are merged. Split them.
 |---|---|
 | The cashier can register a sale and print a receipt. | R1: The cashier registers a sale. R2: The cashier prints a receipt for a registered sale. |
 
+**Preconditions:** a precondition describing one state of one actor (e.g. "Admin is authenticated and has admin privileges.") is a Suggestion, not Critical — it is a state, not a deliverable behaviour. Flag Critical only when the precondition combines unrelated states.
+
 **Exceptions:** proper names and fixed domain terms ("Coffee & Tea", "Boeren en Buren"), a list of data fields belonging to one result ("name and address" on one form) — flag as Suggestion only.
 
 ## 5. Avoid But / Except / Unless
@@ -83,6 +85,6 @@ Possibility verbs make a requirement optional and untestable. Use a definite ver
 
 | Severity | When |
 |---|---|
-| **Critical** | Rule 3, 4 or 5 violated (requirement actually contains multiple requirements or hidden exceptions), or rule 6/7 makes the requirement untestable |
+| **Critical** | Rule 3, 4 or 5 violated in a flow step, business rule, acceptance criterion or spec requirement (requirement actually contains multiple requirements or hidden exceptions), or rule 6/7 makes the requirement untestable |
 | **Warning** | Rule 1 or 2 violated (ambiguous actor, passive voice) |
-| **Suggestion** | Borderline cases (field lists with "and", long but clear sentences) |
+| **Suggestion** | Borderline cases (field lists with "and", long but clear sentences, combined state of one actor in a precondition) |
