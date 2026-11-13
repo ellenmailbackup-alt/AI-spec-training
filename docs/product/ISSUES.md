@@ -1,7 +1,7 @@
 # Issues & Technical Debt
 
 **Project:** Kruze Coffee & Tea Management System
-**Last Updated:** 2026-03-14
+**Last Updated:** 2026-11-13
 
 Items here are bugs, UI inconsistencies, and technical debt — not new features. For planned feature work, see [backlog/INDEX.md](backlog/INDEX.md).
 
@@ -76,7 +76,7 @@ Create `server/customerPriceService.ts` following the `roastService.ts` referenc
 
 **Type:** Bug
 **Severity:** HIGH
-**Related UC:** UC-009 — Manage Supplier Orders
+**Related UC:** UC-009 — Manage Supplier Orders; UC-042 — Verify Supplier Delivery (BR-3c)
 
 **Problem:**
 The `DELETE /api/supplier-orders/:id` route does not check whether the order is confirmed before deleting it. The UI hides the delete button on confirmed orders, but a direct API call bypasses this. Deleting a confirmed order orphans the stock movements that were created during confirmation.
@@ -98,7 +98,7 @@ Call `DELETE /api/supplier-orders/<confirmed-order-id>` with a valid auth cookie
 
 **Type:** Technical Debt
 **Severity:** HIGH
-**Related UC:** UC-009 — Manage Supplier Orders
+**Related UC:** UC-009 — Manage Supplier Orders; UC-042 — Verify Supplier Delivery (BR-5)
 
 **Problem:**
 The confirm route (`POST /api/supplier-orders/:id/confirm`) first marks the order as confirmed via `storage.confirmSupplierOrder(id)`, then creates stock movements for each line item in separate calls via `Promise.all`. If a stock movement insert fails midway, the order remains "confirmed" but inventory is only partially updated. Per architecture rules, all `db.transaction()` calls must be in a service layer.
@@ -320,6 +320,61 @@ Change `GET /api/account/orders` to query the `sales` table (joined with `salesL
 - [ ] Webshop orders (post-payment, recorded as sales) appear in the account order history
 - [ ] Order list shows: order number, date, status, items, total incl. VAT, shipping cost
 - [ ] `webshopOrders` table is no longer queried by this endpoint
+
+---
+
+### ISS-017: Backend Confirms Supplier Orders Without Line Items
+
+**Type:** Bug
+**Severity:** MEDIUM
+**Related UC:** UC-042 — Verify Supplier Delivery (BR-2, EF-1)
+
+**Problem:**
+BR-2 states that the system rejects a confirmation request for a supplier order without line items. The confirm route (`POST /api/supplier-orders/:id/confirm`) does not check the number of line items. Only the UI enforces the rule, by disabling the confirm action. A direct API call confirms an empty order and records no stock movements.
+
+**Solution:**
+Before confirming, fetch the order lines. If the order has no lines, return 400 with a descriptive error. Place the check in the service introduced by ISS-005 when that issue is resolved.
+
+**Test:**
+Call `POST /api/supplier-orders/<empty-order-id>/confirm` as an admin. Currently returns 200 (bug). After the fix, it returns 400 and the order stays Pending.
+
+**Acceptance Criteria:**
+- [ ] The backend rejects confirmation of a supplier order without line items with status 400
+- [ ] The rejected order keeps status Pending
+- [ ] The error response contains a descriptive message
+- [ ] Existing UI behaviour is unchanged
+
+---
+
+### ISS-018: Confirmed Supplier Orders and Their Lines Can Be Changed via API
+
+**Type:** Bug
+**Severity:** HIGH
+**Related UC:** UC-042 — Verify Supplier Delivery (BR-3a, BR-3b, BR-3d); UC-009 — Manage Supplier Orders
+
+**Problem:**
+BR-3 states that a confirmed supplier order is immutable. The backend does not check the confirmed status on these routes:
+- `PATCH /api/supplier-orders/:id` (BR-3a)
+- `POST /api/supplier-orders/:orderId/lines` (BR-3b)
+- `PATCH /api/supplier-order-lines/:id` (BR-3b)
+- `DELETE /api/supplier-order-lines/:id` (BR-3d)
+
+Only the UI prevents these changes. A direct API call changes a confirmed order, so the order no longer matches the stock movements recorded at confirmation. Deletion of the order itself (BR-3c) is tracked in ISS-004.
+
+**Solution:**
+Add a server-side guard to each route: fetch the (parent) supplier order and return 400 when it is confirmed. Prefer one shared helper (e.g. `assertSupplierOrderEditable(orderId)`) over four copies of the check.
+
+**Test:**
+For each route, call it as an admin against a confirmed order or a line of a confirmed order. Currently each call succeeds (bug). After the fix, each call returns 400 and the data is unchanged.
+
+**Acceptance Criteria:**
+- [ ] `PATCH /api/supplier-orders/:id` returns 400 for a confirmed order
+- [ ] `POST /api/supplier-orders/:orderId/lines` returns 400 for a confirmed order
+- [ ] `PATCH /api/supplier-order-lines/:id` returns 400 for a line of a confirmed order
+- [ ] `DELETE /api/supplier-order-lines/:id` returns 400 for a line of a confirmed order
+- [ ] Each rejection leaves the order and its lines unchanged
+- [ ] Each error response contains a descriptive message
+- [ ] Pending orders remain editable
 
 ---
 
