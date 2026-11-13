@@ -1,7 +1,7 @@
 # KRUZE Coffee & Tea — Use Case Index
 
-**Last Updated:** 2026-03-14
-**Total Use Cases:** 36 (29 approved, 7 draft)
+**Last Updated:** 2026-11-13
+**Total Use Cases:** 40 (29 approved, 11 draft)
 **Source:** `kruzeapp-use-case-diagram.drawio` (root), codebase analysis
 
 ---
@@ -96,10 +96,19 @@ This directory contains the structured use case documentation for the KRUZE Coff
 | ID | Title | Domain | Priority | Status |
 |----|-------|--------|----------|--------|
 | [UC-031](UC-031-loyalty-login-verification.md) | Loyalty App Login and Email Verification | Customer / Loyalty | Could | Draft |
-| [UC-032](UC-032-loyalty-earn-points.md) | Earn Loyalty Points | Customer / Loyalty | Could | Draft |
+| [UC-032](UC-032-loyalty-earn-points.md) | Earn Loyalty Points | Customer / Loyalty | Could | Draft — Superseded by UC-043 |
 | [UC-033](UC-033-loyalty-badges.md) | View and Unlock Loyalty Badges | Customer / Gamification | Could | Draft |
-| [UC-034](UC-034-loyalty-redeem-rewards.md) | Redeem Loyalty Rewards | Customer / Loyalty | Could | Draft |
+| [UC-034](UC-034-loyalty-redeem-rewards.md) | Redeem Loyalty Rewards | Customer / Loyalty | Could | Draft — Superseded by UC-045 |
 | [UC-035](UC-035-loyalty-challenges-tips.md) | Participate in Challenges and View Content | Customer / Gamification | Could | Draft |
+
+## Webshop Loyalty Card (UC-043 to UC-046)
+
+| ID | Title | Domain | Priority | Status |
+|----|-------|--------|----------|--------|
+| [UC-043](UC-043-collect-loyalty-card-stamps.md) | Collect Stamps on Loyalty Card (supersedes UC-032) | Customer / Storefront | Should | Draft |
+| [UC-044](UC-044-link-physical-loyalty-card.md) | Link Physical Loyalty Card | Customer / Storefront | Should | Draft |
+| [UC-045](UC-045-redeem-full-loyalty-card.md) | Redeem Full Loyalty Card for Free Product (supersedes UC-034) | Customer / Storefront | Should | Draft |
+| [UC-046](UC-046-configure-loyalty-card-rules.md) | Configure Loyalty Card Rules | Customer / Operations | Should | Draft |
 
 ---
 
@@ -116,7 +125,8 @@ This directory contains the structured use case documentation for the KRUZE Coff
 | **Analytics** | UC-014 | Complete |
 | **Security / Auth** | UC-027 | Complete |
 | **Operations / Config** | UC-012, UC-015, UC-016, UC-029 | Complete |
-| **Loyalty (Future)** | UC-031, UC-032, UC-033, UC-034, UC-035 | Draft |
+| **Loyalty (Future)** | UC-031, UC-032 (superseded), UC-033, UC-034 (superseded), UC-035 | Draft |
+| **Webshop Loyalty Card** | UC-043, UC-044, UC-045, UC-046 | Draft |
 
 ---
 
