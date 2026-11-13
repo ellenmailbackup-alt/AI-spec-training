@@ -1,7 +1,7 @@
 # Product Backlog
 
 **Project:** Kruze Coffee & Tea Management System
-**Last Updated:** March 23, 2026
+**Last Updated:** November 13, 2026
 **Product Owner:** Kruze Business Owner
 
 > Navigation index -- story and epic details live in the subfolders alongside this file.
@@ -32,8 +32,9 @@
 | [Epic 6](./epic-6-storefront/epic.md) | Storefront Website | 5 | ~100 | Partial — cart/checkout/Mollie work; missing i18n, SEO, search, templates |
 | [Epic 7](./epic-7-storefront-account/epic.md) | Storefront Account | 1 | ~5 | Partial — top products works, order history buggy (ISS-016), reorder missing |
 | [Epic 8](./epic-8-customer-pricing/epic.md) | Customer-Specific Pricing | 1 | ~5 | Not Started — backend done, admin UI is placeholder only |
+| [Epic 9](./epic-9-loyalty-card/epic.md) | Webshop Loyalty Stamp Card | 11 | ~47 | Not Started — Should; Storefront + Admin, webshop only |
 
-**Total: 31 story groups / ~276 estimated points**
+**Total: 42 story groups / ~323 estimated points**
 
 ---
 
@@ -81,6 +82,7 @@
 - [Story 5.4](./epic-5-price-calculator/story-5.4-price-calculation-tool.md): Price Calculation Tool (~10 weeks)
 - [Epic 6](./epic-6-storefront/epic.md): Storefront Website (~12 weeks)
 - [Epic 7](./epic-7-storefront-account/epic.md): Storefront Account
+- [Epic 9](./epic-9-loyalty-card/epic.md): Webshop Loyalty Stamp Card (Should; suggested order: 9.1.1, 9.1.2, 9.2.1, 9.2.3, then 9.1.3 + 9.4.1 + 9.4.2, then 9.3.x, 9.2.2)
 
 ---
 
