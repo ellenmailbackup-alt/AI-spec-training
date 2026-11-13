@@ -46,7 +46,7 @@ The admin sets how stamps are earned, how many stamps make a full loyalty card, 
 - **BR-3:** Only active products can be added to the reward choice list.
 - **BR-4:** A product can appear on the reward choice list only once.
 - **BR-5:** A changed euro amount per stamp applies to future orders only; stamps already earned from past orders are not recalculated.
-- **BR-6:** A changed number of stamps per full card applies immediately to all cards; existing stamp balances are not changed, but whether a card is full is judged against the new number. Changing it requires explicit confirmation by the admin.
+- **BR-6:** A changed number of stamps per full card applies immediately to all cards; existing stamp balances are not changed, but whether a card is full is judged against the new number. Changing it requires explicit confirmation by the admin. A reward already reserved by a pending payment keeps the number that applied when payment was started (see UC-045 BR-13).
 - **BR-7:** The reward choice list may be empty. While it contains no active product, no reward is offered and customers' stamps remain on their cards (see UC-045).
 - **BR-8:** A listed product that becomes inactive or is removed from the catalogue stays on the list but is not offered while it is inactive or removed.
 - **BR-9:** While the loyalty card feature is switched off, no stamps are earned (see UC-043), no rewards are offered (see UC-045), and balances are preserved.

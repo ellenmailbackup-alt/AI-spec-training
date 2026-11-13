@@ -35,7 +35,8 @@ A registered customer with a full loyalty card chooses one free product during c
 ## Alternative Flows
 - **AF-1: Decline the Reward** — At step 3, the customer declines the offer. The order continues without a free product and the stamps remain on the card. The flow continues at step 7 without steps 4 to 6; no stamps are reserved at step 8, nothing is deducted at step 11, and no redemption is recorded at step 13. The order earns stamps as a normal order (see UC-043).
 - **AF-2: Change the Chosen Product** — At step 7, before confirming, the customer chooses a different product from the list. The system replaces the free product in the order and the flow continues at step 6.
-- **AF-3: Redeemed Order Cancelled or Refunded** — After step 13, at any later moment, the order is cancelled or refunded. The system gives the deducted stamps back to the loyalty card and records this in the stamp history against the order; stamps earned on the paid part of the order are withdrawn as described in UC-043. The use case ends.
+- **AF-3: Redeemed Order Cancelled or Fully Refunded** — After step 13, at any later moment, the order is cancelled or refunded in full. The system gives the deducted stamps back to the loyalty card and records this in the stamp history against the order; stamps earned on the paid part of the order are withdrawn as described in UC-043. No email that the card is full is sent, even if the card becomes full again through the returned stamps. The use case ends.
+- **AF-4: Redeemed Order Partially Refunded** — After step 13, at any later moment, the order is partially refunded. The system does not give the deducted stamps back; the stamps earned on the paid part are recalculated as described in UC-043 (AF-4). The use case ends.
 
 ## Exception Flows
 - **EF-1: Chosen Product Out of Stock** — At step 5, the chosen product is out of stock. The system informs the customer that the product is not available and asks them to choose another product from the list, after which the flow continues at step 6. If no product on the list is available, the order continues without a free product, the stamps remain on the card, and the flow continues at step 7 as in AF-1.
@@ -48,7 +49,7 @@ A registered customer with a full loyalty card chooses one free product during c
 - The number of stamps required for a full card is deducted; surplus stamps remain.
 - The paid part of the order has earned stamps; the free product has not.
 - The redemption is visible in the stamp history.
-- When the redeemed order is cancelled or refunded, the deducted stamps are back on the card.
+- When the redeemed order is cancelled or refunded in full, the deducted stamps are back on the card; on a partial refund they are not.
 
 ## Business Rules
 - **BR-1:** The reward can only be claimed with a full card, that is, at least the configured number of stamps (N) that are not reserved by another order.
@@ -62,7 +63,9 @@ A registered customer with a full loyalty card chooses one free product during c
 - **BR-9:** The free product can only be granted when the chosen product is in stock.
 - **BR-10:** The reward is only offered when the loyalty card feature is switched on and the choice list contains at least one active product.
 - **BR-11:** The paid part of an order with a reward earns stamps as normal (see UC-043); the free product does not count.
-- **BR-12:** When an order with a redeemed reward is cancelled or refunded, the deducted stamps are given back.
+- **BR-12:** When an order with a redeemed reward is cancelled or refunded in full, the deducted stamps are given back. On a partial refund the deducted stamps are never given back.
+- **BR-13:** The number of stamps deducted is the number required for a full card (N) at the moment the reservation started, that is, when payment was started. A later change of N (see UC-046) does not alter the reserved or deducted number for that order.
+- **BR-14:** No email that the card is full is sent when the card becomes full again because deducted stamps were given back (see UC-043).
 
 ## Implementation Notes
 - Supersedes UC-034 (Redeem Loyalty Rewards) for the webshop. Vouchers with codes, expiry and discounts from UC-034 are not part of this use case.
